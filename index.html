@@ -1,142 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore Costa Rica</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .carousel-item { height: 85vh; background-size: cover; background-position: center; }
-    .overlay {
-      background-color: rgba(255,255,255,0.9);
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 400px;
-      position: absolute;
-      top: 50%; left: 5%;
-      transform: translateY(-50%);
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .info-card {
+      border-radius: 12px;
+      padding: 30px 20px;
+      margin: 10px;
+      color: #000;
+      transition: transform 0.2s ease;
+      height: 100%;
+    }
+    .info-card img {
+      border-radius: 12px;
+      margin-bottom: 15px;
+      max-height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+    .info-title a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+    .info-title a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-
-<!-- Original Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Costa Rica</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="attractions.html">Attractions</a></li>
-        <li class="nav-item"><a class="nav-link" href="practical-info.html">Practical Info</a></li>
-        <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
-      </ul>
+  <header class="bg-success text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <h1 class="h3 m-0">Explore Costa Rica</h1>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+  
+              <!-- EXPERIENCE Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
+                  EXPERIENCE
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
+                  <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
+                  <li><a class="dropdown-item" href="community.html">culture & community</a></li>
+                  <li><a class="dropdown-item" href="festivals.html">events & festivals</a></li>
+                  <li><a class="dropdown-item" href="parks.html">national parks</a></li>
+                  <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
+                </ul>
+              </li>
+  
+              <!-- EXPLORE Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
+                  EXPLORE
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+                  <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                  <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                </ul>
+              </li>
+  
+              <!-- PLAN YOUR TRIP Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
+                  PLAN YOUR TRIP
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Travel Tips</a></li>
+                  <li><a class="dropdown-item" href="#">Suggested Itineraries</a></li>
+                </ul>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
+  
+  
 
-<!-- Original Homepage Welcome Content -->
-<header class="bg-image text-white text-center py-5" style="background-image: url('assets/images/header.jpg'); background-size: cover;">
-  <div class="container">
-    <h1>Discover Costa Rica</h1>
-    <p class="lead">Experience Pura Vida</p>
-  </div>
-</header>
-
-<div class="container py-4">
-  <h2>Welcome to Costa Rica</h2>
-  <p>Costa Rica, located in Central America, is renowned for its stunning beaches, diverse wildlife, lush forests, and vibrant culture.</p>
-  <a href="attractions.html" class="btn btn-success">Explore Attractions</a>
-</div>
-
-<!-- NEW Region Carousel at the BOTTOM -->
-<div id="regionCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
-    <!-- Caribbean -->
-    <div class="carousel-item active" style="background-image: url('assets/images/caribbean.jpg');">
-      <div class="overlay">
-        <h3>Caribbean</h3>
-        <p>An enchanting combination of nature reserves and Afro Caribbean culture.</p>
-        <a class="btn btn-success" href="caribbean.html">Explore →</a>
+  <main class="container my-5">
+    <div class="row text-center align-items-stretch">
+      <!-- Biodiversity -->
+      <div class="col-md-4 d-flex mb-4">
+        <div class="info-card w-100 h-100" style="background-color: #fbe278;">
+          <img src="images/frog.jpg" alt="Macaw in Costa Rica" />
+          <h5 class="info-title mt-3"><a href="biodiversity.html">Biodiversity &rarr;</a></h5>
+          <p>Costa Rica contains over 500,000 species, making up nearly 6% of the world's biodiversity despite its small size!</p>
+        </div>
+      </div>
+  
+      <!-- Culture -->
+      <div class="col-md-4 d-flex mb-4">
+        <div class="info-card w-100 h-100" style="background-color: #f8cbe4;">
+          <img src="images/culture.jpg" alt="Costa Rican Parade" />
+          <h5 class="info-title mt-3"><a href="culture.html">Culture &rarr;</a></h5>
+          <p>Costa Rica has no standing army since 1948, and “Pura Vida” isn’t just a saying — it’s a national philosophy of life.</p>
+        </div>
+      </div>
+  
+      <!-- Sustainability -->
+      <div class="col-md-4 d-flex mb-4">
+        <div class="info-card w-100 h-100" style="background-color: #d1edd1;">
+          <img src="images/sustainability.jpg" alt="Wind Energy Costa Rica" />
+          <h5 class="info-title mt-3"><a href="sustainability.html">Sustainability &rarr;</a></h5>
+          <p> In 2021, Costa Rica ran on  99% renewable energy — mostly from hydropower, wind, and geothermal sources!</p>
+        </div>
       </div>
     </div>
+  </main>
 
-    <!-- Central Pacific -->
-    <div class="carousel-item" style="background-image: url('assets/images/central-pacific.jpg');">
-      <div class="overlay">
-        <h3>Central Pacific</h3>
-        <p>Hiking, cycling, horseback riding and sport fishing are key attractions.</p>
-        <a class="btn btn-success" href="central-pacific.html">Explore →</a>
-      </div>
-    </div>
-
-    <!-- Central Valley -->
-    <div class="carousel-item" style="background-image: url('assets/images/central-valley.jpg');">
-      <div class="overlay">
-        <h3>Central Valley</h3>
-        <p>Home to our capital city, museums, theaters, and delicious food.</p>
-        <a class="btn btn-success" href="central-valley.html">Explore →</a>
-      </div>
-    </div>
-
-    <!-- Guanacaste -->
-    <div class="carousel-item" style="background-image: url('assets/images/guanacaste.jpg');">
-      <div class="overlay">
-        <h3>Guanacaste</h3>
-        <p>Known for folklore and beautiful landscapes, dry forests and beaches.</p>
-        <a class="btn btn-success" href="guanacaste.html">Explore →</a>
-      </div>
-    </div>
-
-    <!-- Northern Plains -->
-    <div class="carousel-item" style="background-image: url('assets/images/northern-plains.jpg');">
-      <div class="overlay">
-        <h3>Northern Plains</h3>
-        <p>Arenal Volcano towers over hot springs, rivers, and waterfalls.</p>
-        <a class="btn btn-success" href="northern-plains.html">Explore →</a>
-      </div>
-    </div>
-
-    <!-- Puntarenas -->
-    <div class="carousel-item" style="background-image: url('assets/images/puntarenas.jpg');">
-      <div class="overlay">
-        <h3>Puntarenas</h3>
-        <p>Loved for its coastline and wildlife in Monteverde Biological Reserve.</p>
-        <a class="btn btn-success" href="puntarenas.html">Explore →</a>
-      </div>
-    </div>
-
-    <!-- South Pacific -->
-    <div class="carousel-item" style="background-image: url('assets/images/south-pacific.jpg');">
-      <div class="overlay">
-        <h3>South Pacific</h3>
-        <p>Covered in lush rainforests and fringed by stunning beaches.</p>
-        <a class="btn btn-success" href="south-pacific.html">Explore →</a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#regionCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#regionCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-  <p>&copy; 2025 Costa Rica Tourism | All Rights Reserved</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="bg-dark text-white text-center p-3">
+    &copy; 2025 Explore Costa Rica
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

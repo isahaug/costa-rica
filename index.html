@@ -39,6 +39,38 @@
     .info-title a:hover {
       text-decoration: underline;
     }
+    .hero-banner {
+    background: url('images/puravida.jpg') center center/cover no-repeat;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+
+  .hero-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 1;
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: lowercase;
+    line-height: 1;
+    font-family: sans-serif;
+  }
+
+  .hero-line {
+    display: block;
+  }
+
   </style>
 </head>
 
@@ -100,8 +132,12 @@
   </header>
   
   <section>
-    <img src="images/puravida.jpg" alt="Pura Vida" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;" />
-  </section>
+    <section class="hero-banner">
+      <div class="hero-text">
+        <span class="hero-line">Costa</span>
+        <span class="hero-line">Rica</span>
+      </div>
+    </section>    
   
   
 

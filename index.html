@@ -40,15 +40,16 @@
       text-decoration: underline;
     }
     .hero-banner {
-    background: url('images/puravida.jpg') center center/cover no-repeat;
-    height: 80vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
+  background: url('images/puravida.jpg') center center/cover no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
 
   .hero-banner::before {
     content: '';
@@ -58,18 +59,21 @@
   }
 
   .hero-text {
-    position: relative;
-    z-index: 1;
-    font-size: 6rem;
-    font-weight: 900;
-    text-transform: lowercase;
-    line-height: 1;
-    font-family: sans-serif;
-  }
+  position: relative;
+  z-index: 1;
+  font-size: clamp(3rem, 10vw, 10rem);
+  font-weight: 900;
+  text-transform: lowercase;
+  line-height: 0.9;              /* Tightens the vertical space */
+  font-family: sans-serif;
+  color: #000;                   /* Makes text black */
+}
 
-  .hero-line {
-    display: block;
-  }
+.hero-line {
+  display: block;
+  margin: 0;
+}
+
 
   </style>
 </head>
@@ -131,13 +135,14 @@
     </div>
   </header>
   
-  <section>
-    <section class="hero-banner">
-      <div class="hero-text">
-        <span class="hero-line">Costa</span>
-        <span class="hero-line">Rica</span>
-      </div>
-    </section>    
+  <section class="hero-image-container position-relative text-center">
+    <img src="images/puravida.jpg" alt="Pura Vida" class="img-fluid w-100" style="opacity: 0.7; max-height: 70vh; object-fit: cover;">
+    <div class="position-absolute top-50 start-50 translate-middle text-white" style="font-size: clamp(3rem, 10vw, 10rem); font-weight: 900; text-transform: lowercase;">
+      <div>Costa</div>
+      <div>Rica</div>
+    </div>
+  </section>
+    
   
   
 

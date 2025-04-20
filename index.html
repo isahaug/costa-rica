@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore Costa Rica</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
     }
+
     .info-card {
       border-radius: 12px;
       padding: 30px 20px;
@@ -21,6 +22,7 @@
       transition: transform 0.2s ease;
       height: 100%;
     }
+
     .info-card img {
       border-radius: 12px;
       margin-bottom: 15px;
@@ -28,53 +30,50 @@
       object-fit: cover;
       width: 100%;
     }
+
     .info-card:hover {
       transform: translateY(-5px);
     }
+
     .info-title a {
       text-decoration: none;
       color: inherit;
       font-weight: bold;
     }
+
     .info-title a:hover {
       text-decoration: underline;
     }
-    .hero-banner {
-  background: url('images/puravida.jpg') center center/cover no-repeat;
-  min-height: 60vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
 
-  .hero-banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+    .hero-image-container {
+      position: relative;
+      text-align: center;
+    }
 
-  .hero-text {
-  position: relative;
-  z-index: 1;
-  font-size: clamp(3rem, 10vw, 10rem);
-  font-weight: 900;
-  text-transform: lowercase;
-  line-height: 0.9;              /* Tightens the vertical space */
-  font-family: sans-serif;
-  color: #000;                   /* Makes text black */
-}
+    .hero-image-container img {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      object-fit: cover;
+      opacity: 0.7;
+    }
 
-.hero-line {
-  display: block;
-  margin: 0;
-}
+    .hero-image-container .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(3rem, 10vw, 10rem);
+      font-weight: 900;
+      text-transform: lowercase;
+      color: #000;
+      line-height: 0.9;
+    }
 
-
+    .hero-image-container .overlay-text div {
+      margin: 0;
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -89,7 +88,7 @@
           </button>
           <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto">
-  
+
               <!-- EXPERIENCE Dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
@@ -104,7 +103,7 @@
                   <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
                 </ul>
               </li>
-  
+
               <!-- EXPLORE Dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
@@ -116,7 +115,7 @@
                   <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
                 </ul>
               </li>
-  
+
               <!-- PLAN YOUR TRIP Dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
@@ -127,24 +126,22 @@
                   <li><a class="dropdown-item" href="#">Suggested Itineraries</a></li>
                 </ul>
               </li>
-  
+
             </ul>
           </div>
         </div>
       </nav>
     </div>
   </header>
-  
-  <section class="hero-image-container position-relative text-center">
-    <img src="images/puravida.jpg" alt="Pura Vida" class="img-fluid w-100" style="opacity: 0.7; max-height: 70vh; object-fit: cover;">
-    <div class="position-absolute top-50 start-50 translate-middle text-white" style="font-size: clamp(3rem, 10vw, 10rem); font-weight: 900; text-transform: lowercase;">
+
+  <!-- Hero Section with Black Text -->
+  <section class="hero-image-container">
+    <img src="images/puravida.jpg" alt="Pura Vida">
+    <div class="overlay-text">
       <div>Costa</div>
       <div>Rica</div>
     </div>
   </section>
-    
-  
-  
 
   <main class="container my-5">
     <div class="row text-center align-items-stretch">
@@ -156,7 +153,7 @@
           <p>Costa Rica contains over 500,000 species, making up nearly 6% of the world's biodiversity despite its small size!</p>
         </div>
       </div>
-  
+
       <!-- Culture -->
       <div class="col-md-4 d-flex mb-4">
         <div class="info-card w-100 h-100" style="background-color: #f8cbe4;">
@@ -165,13 +162,13 @@
           <p>Costa Rica has no standing army since 1948, and “Pura Vida” isn’t just a saying — it’s a national philosophy of life.</p>
         </div>
       </div>
-  
+
       <!-- Sustainability -->
       <div class="col-md-4 d-flex mb-4">
         <div class="info-card w-100 h-100" style="background-color: #d1edd1;">
           <img src="images/sustainability.jpg" alt="Wind Energy Costa Rica" />
           <h5 class="info-title mt-3"><a href="sustainability.html">Sustainability &rarr;</a></h5>
-          <p> In 2021, Costa Rica ran on  99% renewable energy — mostly from hydropower, wind, and geothermal sources!</p>
+          <p>In 2021, Costa Rica ran on 99% renewable energy — mostly from hydropower, wind, and geothermal sources!</p>
         </div>
       </div>
     </div>
@@ -180,6 +177,7 @@
   <footer class="bg-dark text-white text-center p-3">
     &copy; 2025 Explore Costa Rica
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

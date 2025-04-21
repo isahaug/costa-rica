@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adventure & Sports</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adventure & Sports</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      
+        <style>
+          .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+          }
+        </style>
+      </head>
 <header class="bg-success text-white position-sticky top-0 z-3">
     <nav class="navbar navbar-expand-md navbar-dark container-fluid px-3">
       <a href="index.html" class="navbar-brand fw-bold">Explore Costa Rica</a>
@@ -102,5 +111,61 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Horseback Riding Modal -->
+<div class="modal fade" id="horsebackModal" tabindex="-1" aria-labelledby="horsebackLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="horsebackLabel">Horseback Riding in Costa Rica</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light p-4">
+          <p><strong>Duration:</strong> Several hours</p>
+          <p><strong>Type:</strong> Adventure</p>
+          <p><strong>When:</strong> Varies by region</p>
+          <hr>
+          <p>Costa Rica has a great love for horses, which began in the time of colonization with the development of agriculture and herding. Excursions on horseback allow travelers to explore beaches, forests, and mountains, often reaching spots inaccessible by vehicle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Zipline Modal -->
+  <div class="modal fade" id="ziplineModal" tabindex="-1" aria-labelledby="ziplineLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="ziplineLabel">Zip Lining in Costa Rica</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light p-4">
+          <p><strong>Duration:</strong> 1–2 Hours</p>
+          <p><strong>Type:</strong> Adventure</p>
+          <p><strong>When:</strong> All year round</p>
+          <hr>
+          <p>Zip lining is one of the most iconic adventures in Costa Rica. Glide through lush rainforest canopies and enjoy breathtaking views of volcanoes and rivers. Whether in Monteverde or Arenal, this activity offers a thrilling way to explore nature.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Hiking Modal -->
+  <div class="modal fade" id="hikingModal" tabindex="-1" aria-labelledby="hikingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="hikingLabel">Hiking in Costa Rica</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light p-4">
+          <p><strong>Duration:</strong> 1–5 Hours</p>
+          <p><strong>Type:</strong> Nature</p>
+          <p><strong>When:</strong> Varies by region</p>
+          <hr>
+          <p>From easy walks to challenging volcano treks, hiking in Costa Rica means discovering waterfalls, wildlife, and tropical flora in every direction. With 26% of its territory protected, it’s a nature-lover’s paradise.</p>
+        </div>
+      </div>
+    </div>
+  </div>  
 </body>
 </html>

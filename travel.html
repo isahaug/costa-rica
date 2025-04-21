@@ -12,17 +12,17 @@
       margin: 0;
       padding: 0;
     }
-
+  
     header {
       background-color: #437e58;
     }
-
+  
     .section-title {
       font-weight: 700;
       margin: 2rem 0;
       color: #b30000;
     }
-
+  
     .tips-wrapper {
       display: flex;
       overflow-x: auto;
@@ -30,7 +30,7 @@
       -webkit-overflow-scrolling: touch;
       scroll-behavior: smooth;
     }
-
+  
     .tip-block {
       width: 100vw;
       height: 60vh;
@@ -44,25 +44,25 @@
       margin: 0;
       border-radius: 0;
     }
-
+  
     .tip-block .tip-content {
       flex: 1;
       padding: 1rem;
     }
-
+  
     .tip-block .tip-image {
       flex: 1;
       padding: 1rem;
       background-color: rgba(255,255,255,0.1);
       border-radius: 12px;
     }
-
+  
     .tip-block img {
       max-width: 100%;
       border-radius: 12px;
       border: 4px solid white;
     }
-
+  
     .bg1 { background-color: #e74c3c; }
     .bg2 { background-color: #c0392b; }
     .bg3 { background-color: #e67e22; }
@@ -70,7 +70,97 @@
     .bg5 { background-color: #e84393; }
     .bg6 { background-color: #b33771; }
     .bg7 { background-color: #6c5ce7; }
-
+  
+    .travel-tip-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #efefef;
+      border-radius: 20px;
+      margin: 2rem 1rem;
+      padding: 2rem;
+      color: white;
+      align-items: center;
+    }
+  
+    .travel-tip-text {
+      flex: 1;
+      padding-right: 1.5rem;
+    }
+  
+    .travel-tip-text h3 {
+      font-size: 1.8rem;
+    }
+  
+    .travel-tip-text p {
+      font-size: 1.1rem;
+    }
+  
+    .travel-tip-img {
+      flex-shrink: 0;
+      width: 40%;
+      max-width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+  
+    .horizontal-scroll-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+      scroll-padding: 1rem;
+    }
+  
+    .tip-card {
+      flex: 0 0 85%;
+      max-width: 85%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 16px;
+      scroll-snap-align: center;
+      background-color: #f5f5f5;
+      color: white;
+      gap: 1rem;
+    }
+  
+    .tip-content {
+      flex: 1 1 60%;
+      padding-right: 1rem;
+    }
+  
+    .tip-card img {
+      flex: 1 1 35%;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  
+    .tip-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .tip-card p {
+      font-size: 1.1rem;
+    }
+  
+    /* Color variations */
+    .bg1 { background-color: #ef476f; }
+    .bg2 { background-color: #f78c6b; }
+    .bg3 { background-color: #ffd166; color: #333; }
+    .bg4 { background-color: #06d6a0; color: #333; }
+    .bg5 { background-color: #118ab2; }
+    .bg6 { background-color: #8338ec; }
+    .bg7 { background-color: #3a86ff; }
+  
     footer {
       background-color: #222;
       color: white;
@@ -78,120 +168,150 @@
       padding: 1rem;
       margin-top: 3rem;
     }
-  </style>
+  
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .tip-card {
+        flex-direction: column;
+        text-align: center;
+        flex: 0 0 90%;
+        max-width: 90%;
+        padding: 1.5rem;
+      }
+  
+      .tip-content {
+        padding-right: 0;
+      }
+  
+      .tip-card img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>  
 </head>
 <body>
   <!-- HEADER -->
-  <header class="text-white p-3 sticky-top">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html" class="text-white fs-4 fw-bold text-decoration-none">Explore Costa Rica</a>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPERIENCE</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="adventure.html">Adventure & Sports</a></li>
-              <li><a class="dropdown-item" href="beaches.html">Beaches & Relaxation</a></li>
-              <li><a class="dropdown-item" href="festivals.html">Events & Festivals</a></li>
-              <li><a class="dropdown-item" href="wildlife.html">Nature & Wildlife</a></li>
+ 
+<header class="bg-success text-white p-3 position-sticky top-0 z-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <a href="index.html" class="text-white text-decoration-none fw-bold fs-4 m-0">Explore Costa Rica</a>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+  
+              <!-- EXPERIENCE Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
+                  EXPERIENCE
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
+                  <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
+                  <li><a class="dropdown-item" href="festivals.html">events & festivals</a></li>
+                  <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
+                </ul>
+              </li>
+  
+              <!-- EXPLORE Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
+                  EXPLORE
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+                  <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                  <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+                </ul>
+              </li>
+  
+              <!-- PLAN Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
+                  PLAN YOUR TRIP
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
+                  <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+                </ul>
+              </li>
+  
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPLORE</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
-              <li><a class="dropdown-item" href="culture.html">Culture</a></li>
-              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
-              <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
-            </ul>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
 
   <!-- MAIN -->
   <main class="container-fluid px-0">
-    <h2 class="section-title text-center">Travel Tips for Visiting Costa Rica</h2>
-    <div class="tips-wrapper">
-      <section class="tip-block bg1">
+    <h2 class="section-title text-center mt-4">Travel Tips for Visiting Costa Rica</h2>
+  
+    <div class="horizontal-scroll-wrapper">
+      
+      <section class="tip-card bg1">
         <div class="tip-content">
           <h4>✈️ Know Before You Go</h4>
           <p>Ensure your passport is valid for 6+ months. Visitors from the U.S., EU, and many Latin American countries don’t need a visa for stays under 90 days. Proof of onward travel may be required at immigration.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/entry.jpeg" alt="Entry Requirements">
-        </div>
+        <img src="images/entry.jpeg" alt="Entry Requirements">
       </section>
-
-      <section class="tip-block bg2">
+  
+      <section class="tip-card bg2">
         <div class="tip-content">
           <h4>💵 Colones & Credit Cards</h4>
           <p>Costa Rican colones (CRC) are the official currency. U.S. dollars are accepted in many places, but it’s smart to carry local currency for markets, buses, and rural stops. Most hotels and restaurants accept cards.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/currency.jpeg" alt="Currency Tips">
-        </div>
+        <img src="images/currency.jpeg" alt="Currency Tips">
       </section>
-
-      <section class="tip-block bg3">
+  
+      <section class="tip-card bg3">
         <div class="tip-content">
           <h4>🌦️ Packing for Paradise</h4>
           <p>Expect sunshine in dry season (Dec–Apr) and afternoon rain showers from May to November. Bring quick-dry clothes, waterproof shoes, sunscreen, and a light jacket.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/packing.jpg" alt="Packing Suggestions">
-        </div>
+        <img src="images/packing.jpg" alt="Packing Suggestions">
       </section>
-
-      <section class="tip-block bg4">
+  
+      <section class="tip-card bg4">
         <div class="tip-content">
           <h4>🚐 Getting Around</h4>
           <p>Buses and shuttles are budget-friendly and safe. Uber works in San José. If you’re heading to remote areas, consider a 4x4 rental. Waze is the most reliable GPS app locally.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/transport.jpg" alt="Transportation in Costa Rica">
-        </div>
+        <img src="images/transport.jpg" alt="Transportation in Costa Rica">
       </section>
-
-      <section class="tip-block bg5">
+  
+      <section class="tip-card bg5">
         <div class="tip-content">
           <h4>🙌 Respect the Rhythm</h4>
           <p>“Pura vida” is more than a phrase — it’s a way of life. Greet people with kindness. Don’t rush or raise your voice. And always greet when entering a room or shop.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/culture.jpg" alt="Culture and Respect">
-        </div>
+        <img src="images/culture.jpg" alt="Culture and Respect">
       </section>
-
-      <section class="tip-block bg6">
+  
+      <section class="tip-card bg6">
         <div class="tip-content">
           <h4>🌱 Travel Green</h4>
           <p>Protect the paradise you came to see. Skip single-use plastics, respect trails and wildlife, and support local eco-tourism businesses. Costa Rica is globally recognized for sustainability.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/eco.jpg" alt="Sustainability in Costa Rica">
-        </div>
+        <img src="images/eco.jpg" alt="Sustainability in Costa Rica">
       </section>
-
-      <section class="tip-block bg7">
+  
+      <section class="tip-card bg7">
         <div class="tip-content">
           <h4>📶 Internet & SIM Cards</h4>
           <p>WiFi is common in hotels and restaurants. For better connectivity during adventures, grab a local SIM card from Kolbi or Claro at the airport or corner shops.</p>
         </div>
-        <div class="tip-image">
-          <img src="images/wifi.jpg" alt="WiFi and SIM Cards">
-        </div>
+        <img src="images/wifi.jpg" alt="WiFi and SIM Cards">
       </section>
+  
     </div>
   </main>
-
+  
   <footer>
     &copy; 2025 Explore Costa Rica
   </footer>

@@ -2,163 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Safety in Costa Rica</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #fff0f0;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background-color: #3c805c;
+      background-color: #437e58;
     }
 
-    .navbar-nav .nav-link {
-      color: white !important;
-    }
-
-    .split-section {
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 100vh;
-    }
-
-    .left-side {
-      background-color: #f8c291;
-      flex: 1 1 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .right-side {
-      background-color: #dff9fb;
-      flex: 1 1 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem 3rem;
-    }
-
-    .left-side img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 15px;
-    }
-
-    .right-side h2 {
+    .section-title {
       font-weight: 700;
-      color: #1e3d2f;
-      margin-bottom: 1rem;
+      margin: 2rem 0;
+      color: #b30000;
     }
 
-    .right-side p {
-      color: #1e3d2f;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+    .safety-box {
+      border-radius: 12px;
+      padding: 25px;
+      margin: 1rem 0;
+      color: #222;
     }
 
-    .tips-section {
-      background-color: #fff;
-      padding: 3rem 1rem;
+    .light-pink { background-color: #ffe4e4; }
+    .pink { background-color: #f8bcbc; }
+    .salmon { background-color: #f88379; color: white; }
+    .red { background-color: #e63946; color: white; }
+    .soft-red { background-color: #ff9999; }
+
+    h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    .tips-section h3 {
-      color: #1e3d2f;
-      margin-bottom: 2rem;
+    a {
+      color: #ffffff;
+      text-decoration: underline;
     }
 
-    .tips-list li {
-      margin-bottom: 1.25rem;
+    a:hover {
+      color: #ddd;
     }
 
-    @media (max-width: 768px) {
-      .split-section {
-        flex-direction: column;
-      }
+    ul {
+      padding-left: 1.2rem;
+    }
 
-      .left-side, .right-side {
-        flex: 1 1 100%;
-      }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
+
 <body>
+  <!-- HEADER -->
+  <header class="text-white p-3 sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-white fs-4 fw-bold text-decoration-none">Explore Costa Rica</a>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPERIENCE</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="adventure.html">Adventure & Sports</a></li>
+              <li><a class="dropdown-item" href="beaches.html">Beaches & Relaxation</a></li>
+              <li><a class="dropdown-item" href="community.html">Culture & Community</a></li>
+              <li><a class="dropdown-item" href="festivals.html">Events & Festivals</a></li>
+              <li><a class="dropdown-item" href="parks.html">National Parks</a></li>
+              <li><a class="dropdown-item" href="wildlife.html">Nature & Wildlife</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPLORE</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+              <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tips.html">Travel Tips</a></li>
+              <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- Header -->
-<header class="p-3 sticky-top">
-  <div class="container d-flex justify-content-between align-items-center flex-wrap">
-    <a href="index.html" class="text-white h4 text-decoration-none">Explore Costa Rica</a>
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">EXPERIENCE</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="adventure.html">Adventure & Sports</a></li>
-                <li><a class="dropdown-item" href="beaches.html">Beaches & Relaxation</a></li>
-                <li><a class="dropdown-item" href="community.html">Culture & Community</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">EXPLORE</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
-                <li><a class="dropdown-item" href="culture.html">Culture</a></li>
-                <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="tips.html">Travel Tips</a></li>
-                <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
+  <!-- MAIN CONTENT -->
+  <main class="container my-5">
+    <h2 class="section-title text-center">Safety in Costa Rica</h2>
 
-<!-- Hero Section -->
-<section class="split-section">
-  <div class="left-side">
-    <img src="images/safety-cover.jpg" alt="Safe travel in Costa Rica">
-  </div>
-  <div class="right-side">
-    <h2>Your Safety in Costa Rica</h2>
-    <p>Costa Rica is one of the safest destinations in Latin America. With friendly locals and a strong tourism culture, it offers a peaceful environment for travelers.</p>
-    <p>While major cities and national parks are generally secure, it’s still wise to take common travel precautions—like guarding personal items and staying alert in crowded areas.</p>
-    <p>In nature, always follow park rules and ask locals about sea currents or trail conditions. When prepared, Costa Rica is an incredibly rewarding place to explore confidently.</p>
-  </div>
-</section>
+    <div class="safety-box light-pink">
+      <h5>🛡️ General Safety Overview</h5>
+      <p>Costa Rica is widely considered one of the safest countries in Central America. It has a stable democracy, friendly locals, and a strong tourism infrastructure. Petty theft (like pickpocketing) can happen in crowded areas, but violent crime is rare in tourist zones.</p>
+    </div>
 
-<!-- Safety Tips -->
-<section class="tips-section">
-  <div class="container">
-    <h3 class="text-center">Top Safety Tips</h3>
-    <ul class="tips-list list-unstyled">
-      <li>✅ Keep valuables secure and out of sight in public places.</li>
-      <li>✅ Use official red taxis or authorized shuttle services.</li>
-      <li>✅ Avoid swimming at unguarded beaches unless you know the current.</li>
-      <li>✅ Carry a copy of your passport and keep the original in a safe place.</li>
-      <li>✅ Use mosquito repellent in rural or forested areas.</li>
-      <li>✅ If hiking or driving in remote areas, check weather conditions beforehand.</li>
-      <li>✅ Emergency number in Costa Rica is <strong>911</strong>.</li>
-    </ul>
-  </div>
-</section>
+    <div class="safety-box pink">
+      <h5>🚶 Street & City Safety Tips</h5>
+      <ul>
+        <li>Stick to well-lit streets after dark.</li>
+        <li>Don’t flash valuables — store phones and jewelry safely.</li>
+        <li>🚕 Use official red taxis with yellow triangle logos.</li>
+      </ul>
+    </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="safety-box salmon">
+      <h5>🌋 Natural Hazards</h5>
+      <ul>
+        <li>Beaches may lack lifeguards — ask locals before swimming.</li>
+        <li>Stay updated on volcano activity and trail closures.</li>
+        <li>Rainy season (May–Nov) can cause road flooding or landslides in mountainous regions.</li>
+      </ul>
+    </div>
 
+    <div class="safety-box soft-red">
+      <h5>🦟 Health & Medical Info</h5>
+      <ul>
+        <li>Tap water is safe in most areas, but use bottled water in rural zones.</li>
+        <li>Apply repellent to avoid mosquito bites (especially near rivers).</li>
+        <li>No vaccines required, but Hepatitis A and Typhoid are suggested if you're exploring remote areas.</li>
+      </ul>
+    </div>
+
+    <div class="safety-box red">
+      <h5>📞 Emergency Contacts</h5>
+      <ul>
+        <li><strong>Police:</strong> <a href="tel:911">911</a></li>
+        <li><strong>Medical Help:</strong> <a href="tel:911">911</a></li>
+        <li><strong>Tourist Police:</strong> <a href="tel:+50622215447">+506 2221-5447</a></li>
+        <li><strong>US Embassy:</strong> <a href="https://cr.usembassy.gov/" target="_blank">+506 2519-2000</a></li>
+      </ul>
+    </div>
+
+    <div class="safety-box pink">
+      <h5>🧠 Travel Smart: Common Scams</h5>
+      <ul>
+        <li>Beware of "friendly strangers" offering unlicensed tours or taxis.</li>
+        <li>Never let your credit card out of sight — always watch transactions.</li>
+        <li>Don't carry your passport everywhere. Use a copy for ID.</li>
+      </ul>
+    </div>
+
+    <div class="safety-box salmon">
+      <h5>🔐 Female & LGBTQ+ Travelers</h5>
+      <p>Costa Rica is welcoming to all travelers. Solo female travelers and LGBTQ+ tourists generally feel safe, especially in cities and beach towns. In rural areas, public affection may attract attention, but discrimination is rare.</p>
+    </div>
+
+    <div class="safety-box soft-red">
+      <h5>🧳 Packing Safety Tips</h5>
+      <ul>
+        <li>Photocopy your passport and store it in a separate bag.</li>
+        <li>Bring a dry bag or waterproof pouch for boat or beach days.</li>
+        <li>A small flashlight or power bank can be handy in rural areas.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Explore Costa Rica
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

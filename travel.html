@@ -78,123 +78,44 @@
       padding: 1rem;
       margin-top: 3rem;
     }
-    <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fffaf8;
-    }
-    header {
-      background-color: #3e805f;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    header .navbar-brand {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: white;
-    }
-    .navbar-nav .nav-link {
-      color: white !important;
-    }
-    section {
-      padding: 2rem 1rem;
-      margin: 1rem auto;
-      max-width: 900px;
-      border-radius: 12px;
-    }
-    .section-light {
-      background-color: #ffecec;
-      color: #111;
-    }
-    .section-mid {
-      background-color: #ffb3b3;
-      color: #111;
-    }
-    .section-dark {
-      background-color: #cc3c3c;
-      color: white;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .highlight-box {
-      padding: 1rem;
-      border-radius: 8px;
-      background-color: white;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    a {
-      color: inherit;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
-  </head>
+</head>
 <body>
-    <header class="bg-success text-white p-3 position-sticky top-0 z-3">
-        <div class="container d-flex justify-content-between align-items-center flex-wrap">
-          <a href="index.html" class="text-white text-decoration-none fw-bold fs-4 m-0">Explore Costa Rica</a>
-          <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
-      
-                  <!-- EXPERIENCE Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
-                      EXPERIENCE
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
-                      <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
-                      <li><a class="dropdown-item" href="festivals.html">events & festivals</a></li>
-                      <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
-                    </ul>
-                  </li>
-      
-                  <!-- EXPLORE Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
-                      EXPLORE
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
-                      <li><a class="dropdown-item" href="culture.html">Culture</a></li>
-                      <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-                    </ul>
-                  </li>
-      
-                  <!-- PLAN Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
-                      PLAN YOUR TRIP
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
-                      <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
-                    </ul>
-                  </li>
-      
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      
+  <!-- HEADER -->
+  <header class="text-white p-3 sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-white fs-4 fw-bold text-decoration-none">Explore Costa Rica</a>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPERIENCE</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="adventure.html">Adventure & Sports</a></li>
+              <li><a class="dropdown-item" href="beaches.html">Beaches & Relaxation</a></li>
+              <li><a class="dropdown-item" href="festivals.html">Events & Festivals</a></li>
+              <li><a class="dropdown-item" href="wildlife.html">Nature & Wildlife</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPLORE</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+              <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
+              <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- MAIN -->
   <main class="container-fluid px-0">
     <h2 class="section-title text-center">Travel Tips for Visiting Costa Rica</h2>

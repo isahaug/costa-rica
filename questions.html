@@ -9,12 +9,13 @@
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f5f5f5;
-      padding-top: 80px;
+      margin: 0;
+      padding: 0;
     }
 
     .form-section {
       max-width: 600px;
-      margin: auto;
+      margin: 100px auto 2rem auto; /* space for sticky header */
       padding: 2rem;
       background-color: white;
       border-radius: 12px;
@@ -35,10 +36,74 @@
     .btn-custom:hover {
       background-color: #24553e;
     }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
   </style>
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <header class="bg-success text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <a href="index.html" class="h3 m-0 text-white text-decoration-none">Explore Costa Rica</a>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+
+              <!-- EXPERIENCE Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
+                  EXPERIENCE
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
+                  <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
+                  <li><a class="dropdown-item" href="community.html">culture & community</a></li>
+                  <li><a class="dropdown-item" href="festivals.html">events & festivals</a></li>
+                  <li><a class="dropdown-item" href="parks.html">national parks</a></li>
+                  <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
+                </ul>
+              </li>
+
+              <!-- EXPLORE Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
+                  EXPLORE
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+                  <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                  <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+                </ul>
+              </li>
+
+              <!-- PLAN YOUR TRIP Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
+                  PLAN YOUR TRIP
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="tips.html">Travel Tips</a></li>
+                  <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FORM SECTION -->
   <div class="container">
     <section class="form-section">
       <h2 class="text-center">Ask Us a Question</h2>
@@ -60,7 +125,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="email" class="form-label">Your Email (if you'd like a response)</label>
+          <label for="email" class="form-label">Your Email (optional)</label>
           <input type="email" name="email" class="form-control" id="email">
         </div>
 

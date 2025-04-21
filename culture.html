@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Costa Rican Culture – Explore Costa Rica</title>
+  <title>Costa Rican Culture</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -14,45 +14,96 @@
 
     header {
       background-color: #437e58;
+      padding: 1rem 2rem;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .intro-box {
+      background-color: #f8e6e6;
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 15px;
+      font-size: 1.2rem;
     }
 
     .section-title {
-      font-weight: 700;
-      margin: 2rem 0 1rem;
-      color: #b30000;
-      text-align: center;
+      font-size: 2rem;
+      margin: 2rem 1rem 1rem;
+      color: #214e3d;
     }
 
-    .slider-container {
-      overflow-x: auto;
+    .cuisine-scroll {
       display: flex;
-      gap: 1rem;
-      padding: 1rem;
+      overflow-x: auto;
       scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem 0 2rem 1rem;
     }
 
-    .slider-container img {
+    .cuisine-scroll img {
+      width: 300px;
       height: 200px;
-      border-radius: 12px;
-      scroll-snap-align: start;
-      flex: 0 0 23%;
       object-fit: cover;
+      scroll-snap-align: start;
+      border-radius: 12px;
+      flex-shrink: 0;
     }
+
+    @media (max-width: 768px) {
+      .cuisine-scroll img {
+        width: 220px;
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .cuisine-scroll img {
+        width: 90vw;
+        height: 160px;
+      }
+    }
+
+    .museum-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0;
+  margin: 0;
+}
+
+.museum-card {
+  flex: 0 0 auto;
+  min-width: 300px;
+  max-width: 350px;
+  margin: 0;
+  border-radius: 0;
+  padding: 1.5rem;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.museum-title {
+  font-weight: bold;
+}
 
     .highlight-box {
-      background-color: #f9e2e2;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
+      background-color: #f0e6ff;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 1rem;
+      font-size: 1.1rem;
     }
 
     a {
+      color: #214e3d;
       text-decoration: underline;
-      color: #2f4f4f;
     }
 
     a:hover {
-      color: #b30000;
+      text-decoration: none;
     }
 
     footer {
@@ -66,95 +117,132 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="text-white p-3 sticky-top">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html" class="text-white fs-4 fw-bold text-decoration-none">Explore Costa Rica</a>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPERIENCE</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="adventure.html">Adventure & Sports</a></li>
-              <li><a class="dropdown-item" href="beaches.html">Beaches & Relaxation</a></li>
-              <li><a class="dropdown-item" href="community.html">Culture & Community</a></li>
-              <li><a class="dropdown-item" href="festivals.html">Events & Festivals</a></li>
-              <li><a class="dropdown-item" href="parks.html">National Parks</a></li>
-              <li><a class="dropdown-item" href="wildlife.html">Nature & Wildlife</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPLORE</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
-              <li><a class="dropdown-item" href="culture.html">Culture</a></li>
-              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
-              <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container my-5">
-    <h2 class="section-title">Cultural Essence of Costa Rica</h2>
-    <div class="highlight-box">
-      <p>From traditional music and folk dancing to colorful festivals and time-honored recipes, Costa Rican culture is rooted in joy and hospitality. Whether you join a street parade in Liberia or try homemade tamales at a roadside stand — you’ll feel the essence of “Pura Vida.”</p>
-    </div>
-
-    <h2 class="section-title">🍛 Traditional Cuisines</h2>
-    <p class="text-center">Swipe through these iconic Costa Rican dishes!</p>
-    <div class="slider-container">
-      <img src="images/cul1.jpg" alt="Dish 1">
-      <img src="images/cul2.jpg" alt="Dish 2">
-      <img src="images/cul3.jpg" alt="Dish 3">
-      <img src="images/cul4.jpg" alt="Dish 4">
-      <img src="images/cul5.jpg" alt="Dish 5">
-      <img src="images/cul6.jpg" alt="Dish 6">
-      <img src="images/cul7.jpg" alt="Dish 7">
-      <img src="images/cul8.jpg" alt="Dish 8">
-      <img src="images/cul9.jpg" alt="Dish 9">
-      <img src="images/cul10.jpg" alt="Dish 10">
-      <img src="images/cul11.jpg" alt="Dish 11">
-      <img src="images/cul12.jpg" alt="Dish 12">
-    </div>
-
-    <h2 class="section-title">🍽️ Cultural Restaurants</h2>
-    <div class="highlight-box">
-      <ul>
-        <li><a href="https://www.facebook.com/sodaTAPIA/">Soda Tapia – San José</a>: A 100-year-old eatery for gallo pinto, casado, and more.</li>
-        <li><a href="https://www.instagram.com/soda.victoria/">Soda La Victoria – Cartago</a>: Authentic homestyle Costa Rican food.</li>
-        <li><a href="https://www.tripadvisor.com/Restaurant_Review-g309293-d1239269-Reviews-Tiquicia_Restaurant-San_Jose_San_Jose_Metro_Province_of_San_Jose.html">Restaurante Tiquicia – Escazú</a>: Traditional food + stunning city views + marimba music!</li>
+<header class="d-flex justify-content-between align-items-center flex-wrap">
+  <a href="index.html" class="text-white fs-4 fw-bold text-decoration-none">Explore Costa Rica</a>
+  <nav class="d-flex gap-4">
+    <div class="dropdown">
+      <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPERIENCE</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="adventure.html">Adventure & Sports</a></li>
+        <li><a class="dropdown-item" href="beaches.html">Beaches & Relaxation</a></li>
+        <li><a class="dropdown-item" href="community.html">Culture & Community</a></li>
+        <li><a class="dropdown-item" href="festivals.html">Events & Festivals</a></li>
+        <li><a class="dropdown-item" href="parks.html">National Parks</a></li>
+        <li><a class="dropdown-item" href="wildlife.html">Nature & Wildlife</a></li>
       </ul>
     </div>
-
-    <h2 class="section-title">🗿 Cultural Tours</h2>
-    <div class="highlight-box">
-      <ul>
-        <li><a href="https://www.getyourguide.com/san-jose-l379/san-jose-walking-food-tour-in-city-center-t428066/" target="_blank">San José Walking & Food Tour</a></li>
-        <li><a href="https://www.getyourguide.com/san-jose-l379/from-san-jose-caribbean-sloths-culture-cacao-day-trip-t402933/" target="_blank">Sloths + Caribbean Culture + Chocolate Tour</a></li>
-        <li><a href="https://www.viator.com/tours/San-Jose/Coffee-Cultural-and-Nature-Tour-in-San-Jose/d793-69560P1" target="_blank">Coffee + Cultural Museum Combo Tour</a></li>
+    <div class="dropdown">
+      <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">EXPLORE</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+        <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+        <li><a class="dropdown-item" href="safety.html">Safety</a></li>
       </ul>
     </div>
-
-    <h2 class="section-title">📅 Cultural Agenda</h2>
-    <div class="highlight-box text-center">
-      <p>Explore live events, festivals, concerts and museum exhibits on the official Ministry of Culture agenda.</p>
-      <a href="https://www.mcj.go.cr/agenda" target="_blank">Visit the Ministry of Culture Agenda →</a>
+    <div class="dropdown">
+      <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
+        <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+      </ul>
     </div>
-  </main>
+  </nav>
+</header>
 
-  <footer>
-    &copy; 2025 Explore Costa Rica
-  </footer>
+<main>
+  <h1 class="text-center mt-4 mb-0 display-4 fw-bold" style="color:#214e3d;">Culture</h1>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <section class="intro-box">
+    From traditional music and folk dancing to colorful festivals and time-honored recipes, Costa Rican culture is rooted in joy and hospitality. Whether you join a street parade in Liberia or try homemade tamales at a roadside stand — you’ll feel the essence of “Pura Vida.”
+  </section>
+
+  <h2 class="section-title">🍛 Traditional Cuisine</h2>
+  <div class="cuisine-scroll">
+    <img src="images/cul1.jpg" alt="Dish 1">
+    <img src="images/cul2.jpg" alt="Dish 2">
+    <img src="images/cul3.jpg" alt="Dish 3">
+    <img src="images/cul4.jpg" alt="Dish 4">
+    <img src="images/cul5.jpg" alt="Dish 5">
+    <img src="images/cul6.jpg" alt="Dish 6">
+    <img src="images/cul7.jpg" alt="Dish 7">
+    <img src="images/cul8.jpg" alt="Dish 8">
+    <img src="images/cul9.jpg" alt="Dish 9">
+    <img src="images/cul10.jpg" alt="Dish 10">
+    <img src="images/cul11.jpg" alt="Dish 11">
+    <img src="images/cul12.jpg" alt="Dish 12">
+  </div>
+
+  <h2 class="section-title">🏛️ Museums of Costa Rica</h2>
+<div class="museum-slider">
+  <div class="museum-card" style="background-color: #ffe0e0;">
+    <h5 class="museum-title">National Museum of Costa Rica</h5>
+    <p><strong>Hours:</strong> Tue–Sun, 8:30am–4:30pm</p>
+    <p><strong>Website:</strong> <a href="https://www.museocostarica.go.cr" target="_blank">museocostarica.go.cr</a></p>
+    <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=National+Museum+of+Costa+Rica" target="_blank">Google Maps</a></p>
+  </div>
+
+  <div class="museum-card" style="background-color: #fff4c2;">
+    <h5 class="museum-title">Museum of Contemporary Art and Design</h5>
+    <p><strong>Hours:</strong> Tue–Sat, 9am–5pm</p>
+    <p><strong>Website:</strong> <a href="https://www.madc.cr" target="_blank">madc.cr</a></p>
+    <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=Museo+de+Arte+y+Dise%C3%B1o+Contempor%C3%A1neo+Costa+Rica" target="_blank">Google Maps</a></p>
+  </div>
+
+  <div class="museum-card" style="background-color: #e2f7d1;">
+    <h5 class="museum-title">Jade Museum</h5>
+    <p><strong>Hours:</strong> Mon–Sun, 8am–5pm</p>
+    <p><strong>Website:</strong> <a href="https://www.museodeljadeins.com" target="_blank">museodeljadeins.com</a></p>
+    <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=Jade+Museum,+San+Jos%C3%A9,+Costa+Rica" target="_blank">Google Maps</a></p>
+  </div>
+
+  <div class="museum-card" style="background-color: #d6eaff;">
+    <h5 class="museum-title">Pre-Columbian Gold Museum</h5>
+    <p><strong>Hours:</strong> Mon–Sun, 9am–5pm</p>
+    <p><strong>Website:</strong> <a href="https://www.museosdelbancocentral.org" target="_blank">museosdelbancocentral.org</a></p>
+    <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=Museo+del+Oro+Precolombino" target="_blank">Google Maps</a></p>
+  </div>
+
+  <div class="museum-card" style="background-color: #f1e1ff;">
+    <h5 class="museum-title">Museum of Popular Culture</h5>
+    <p><strong>Hours:</strong> Tue–Sat, 9am–4pm</p>
+    <p><strong>Website:</strong> <a href="https://www.govisitcostarica.com/travelInfo/museums/museum-popular-culture.asp" target="_blank">cultura.cr</a></p>
+    <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=Museo+de+Cultura+Popular+Barva" target="_blank">Google Maps</a></p>
+  </div>
+
+  <div class="museum-card" style="background-color: #e0f0f7;">
+    <h5 class="museum-title">Children’s Museum</h5>
+    <p><strong>Hours:</strong> Tue–Sun, 8am–4:30pm</p>
+    <p><strong>Website:</strong> <a href="https://museocr.org" target="_blank">museocr.org</a></p>
+    <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=Museo+de+los+Ni%C3%B1os+Costa+Rica" target="_blank">Google Maps</a></p>
+  </div>
+</div>
+
+  
+
+  <h2 class="section-title">🎭 Cultural Experiences</h2>
+  <div class="highlight-box">
+    <p><strong>Events:</strong> Check live music, theater, and cultural events on the official agenda: <a href="https://www.mcj.go.cr/agenda" target="_blank">Ministry of Culture Agenda</a></p>
+    <p><strong>Restaurants:</strong> Enjoy local flavors at <a href="https://www.facebook.com/sodaTAPIA/" target="_blank">Soda Tapia</a> or <a href="https://www.instagram.com/soda.victoria/" target="_blank">Soda La Victoria</a></p>
+    <p><strong>Tours:</strong></p>
+    <ul>
+      <li><a href="https://costaricaculturetours.com/tours/don-guelos-farm/" target="_blank">Don Guelo’s Farm Tour – Uvita</a></li>
+      <li><a href="https://costaricaculturetours.com/tours/whale-tail-walk/" target="_blank">Whale Tail Walk – Uvita</a></li>
+      <li><a href="https://costaricaculturetours.com/tours/community-walk/" target="_blank">Community Walking Tour – Bahía Ballena</a></li>
+      <li><a href="https://costaricaculturetours.com/tours/coconut/" target="_blank">Coconut Tour with David – Uvita</a></li>
+      <li><a href="https://costaricaculturetours.com/tours/ademar-sugar-cane/" target="_blank">Sugar Cane Tour with Ademar – Uvita</a></li>
+      <li><a href="https://costaricaculturetours.com/tours/gallos-farm/" target="_blank">Gallo’s Integral Farm Tour – Uvita</a></li>
+      <li><a href="https://www.thecostaricatoursite.com/arenal/Sightseeing_Cultural_Tours.php" target="_blank">Rainforest Chocolate Tour – La Fortuna</a></li>
+      <li><a href="https://www.cafebritt.com/visit-us" target="_blank">Café Britt Coffee Tour – Heredia</a></li>
+      <li><a href="https://diamanteecoadventurepark.com/adventures/cultural-experience-tour/" target="_blank">Cultural Experience Tour – Diamante Eco Park</a></li>
+      <li><a href="https://fincarosablanca.com/en/activities/cultural-costa-rica-itinerary-highlands-tour/" target="_blank">Cultural Highlands Tour – Finca Rosa Blanca</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Explore Costa Rica
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

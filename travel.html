@@ -9,6 +9,8 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #fff0f0;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -21,31 +23,53 @@
       color: #b30000;
     }
 
-    .tip-box {
-      border-radius: 12px;
-      padding: 25px;
-      margin: 1rem 0;
+    .tips-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
 
-    .light-pink { background-color: #ffe4e4; color: #222; }
-    .pink { background-color: #f8bcbc; color: #222; }
-    .salmon { background-color: #f88379; color: white; }
-    .red { background-color: #e63946; color: white; }
-    .soft-red { background-color: #ff9999; color: #222; }
-
-    h5 {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    a {
+    .tip-block {
+      width: 100vw;
+      height: 60vh;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
       color: white;
-      text-decoration: underline;
+      margin: 0;
+      border-radius: 0;
     }
 
-    a:hover {
-      color: #ddd;
+    .tip-block .tip-content {
+      flex: 1;
+      padding: 1rem;
     }
+
+    .tip-block .tip-image {
+      flex: 1;
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 12px;
+    }
+
+    .tip-block img {
+      max-width: 100%;
+      border-radius: 12px;
+      border: 4px solid white;
+    }
+
+    .bg1 { background-color: #e74c3c; }
+    .bg2 { background-color: #c0392b; }
+    .bg3 { background-color: #e67e22; }
+    .bg4 { background-color: #d35400; }
+    .bg5 { background-color: #e84393; }
+    .bg6 { background-color: #b33771; }
+    .bg7 { background-color: #6c5ce7; }
 
     footer {
       background-color: #222;
@@ -56,7 +80,6 @@
     }
   </style>
 </head>
-
 <body>
   <!-- HEADER -->
   <header class="text-white p-3 sticky-top">
@@ -86,7 +109,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="tips.html">Travel Tips</a></li>
+              <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
               <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
             </ul>
           </li>
@@ -95,43 +118,79 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container my-5">
+  <!-- MAIN -->
+  <main class="container-fluid px-0">
     <h2 class="section-title text-center">Travel Tips for Visiting Costa Rica</h2>
+    <div class="tips-wrapper">
+      <section class="tip-block bg1">
+        <div class="tip-content">
+          <h4>✈️ Know Before You Go</h4>
+          <p>Ensure your passport is valid for 6+ months. Visitors from the U.S., EU, and many Latin American countries don’t need a visa for stays under 90 days. Proof of onward travel may be required at immigration.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/entry.jpg" alt="Entry Requirements">
+        </div>
+      </section>
 
-    <div class="tip-box light-pink">
-      <h5>✈️ Know Before You Go</h5>
-      <p>Make sure your passport is valid for at least 6 months. Citizens from the U.S., EU, and most of Latin America don’t need a visa for stays under 90 days. Have proof of onward travel and hotel bookings — immigration may ask.</p>
-    </div>
+      <section class="tip-block bg2">
+        <div class="tip-content">
+          <h4>💵 Colones & Credit Cards</h4>
+          <p>Costa Rican colones (CRC) are the official currency. U.S. dollars are accepted in many places, but it’s smart to carry local currency for markets, buses, and rural stops. Most hotels and restaurants accept cards.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/currency.jpg" alt="Currency Tips">
+        </div>
+      </section>
 
-    <div class="tip-box pink">
-      <h5>💵 Colones & Credit Cards</h5>
-      <p>The official currency is the Costa Rican colón, but U.S. dollars are accepted in most tourist areas. Carry some cash for tips, taxis, and local markets. Credit cards are widely accepted, but rural shops may be cash-only.</p>
-    </div>
+      <section class="tip-block bg3">
+        <div class="tip-content">
+          <h4>🌦️ Packing for Paradise</h4>
+          <p>Expect sunshine in dry season (Dec–Apr) and afternoon rain showers from May to November. Bring quick-dry clothes, waterproof shoes, sunscreen, and a light jacket.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/packing.jpg" alt="Packing Suggestions">
+        </div>
+      </section>
 
-    <div class="tip-box salmon">
-      <h5>🌦️ Packing for Paradise</h5>
-      <p>Dry season (Dec–Apr) is sunny; rainy season (May–Nov) is lush but wet. Pack layers, a rain jacket, bug spray, and sunscreen. Don’t forget quick-dry clothes and a swimsuit — waterfalls await!</p>
-    </div>
+      <section class="tip-block bg4">
+        <div class="tip-content">
+          <h4>🚐 Getting Around</h4>
+          <p>Buses and shuttles are budget-friendly and safe. Uber works in San José. If you’re heading to remote areas, consider a 4x4 rental. Waze is the most reliable GPS app locally.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/transport.jpg" alt="Transportation in Costa Rica">
+        </div>
+      </section>
 
-    <div class="tip-box soft-red">
-      <h5>🚐 Getting Around</h5>
-      <p>Public buses are budget-friendly, Uber works in San José, and taxis are reliable when official. For exploring beaches or volcanoes, a 4x4 rental is best. Download Waze — it’s the go-to navigation app here.</p>
-    </div>
+      <section class="tip-block bg5">
+        <div class="tip-content">
+          <h4>🙌 Respect the Rhythm</h4>
+          <p>“Pura vida” is more than a phrase — it’s a way of life. Greet people with kindness. Don’t rush or raise your voice. And always greet when entering a room or shop.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/culture.jpg" alt="Culture and Respect">
+        </div>
+      </section>
 
-    <div class="tip-box red">
-      <h5>🙌 Respect the Rhythm</h5>
-      <p>Greet others with a smile and a friendly “¡Pura vida!”. Costa Ricans value politeness and calm. Tipping is optional (10% is standard at restaurants). Avoid loud complaints — Ticos are chill, and you should be too.</p>
-    </div>
+      <section class="tip-block bg6">
+        <div class="tip-content">
+          <h4>🌱 Travel Green</h4>
+          <p>Protect the paradise you came to see. Skip single-use plastics, respect trails and wildlife, and support local eco-tourism businesses. Costa Rica is globally recognized for sustainability.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/eco.jpg" alt="Sustainability in Costa Rica">
+        </div>
+      </section>
 
-    <div class="tip-box pink">
-      <h5>🌱 Travel Green</h5>
-      <p>Costa Rica is a sustainability superstar. Use a refillable bottle, skip single-use plastics, and stick to marked trails in parks. Choose locally owned hotels and guides — eco travel means pura vida for everyone.</p>
-    </div>
-
-    <div class="tip-box salmon">
-      <h5>📶 Internet & SIM Cards</h5>
-      <p>WiFi is common in hotels and cafes. For better coverage in remote areas, grab a local SIM card (Kolbi, Claro, or Movistar). You can find them at the airport or any convenience store.</p>
+      <section class="tip-block bg7">
+        <div class="tip-content">
+          <h4>📶 Internet & SIM Cards</h4>
+          <p>WiFi is common in hotels and restaurants. For better connectivity during adventures, grab a local SIM card from Kolbi or Claro at the airport or corner shops.</p>
+        </div>
+        <div class="tip-image">
+          <img src="images/wifi.jpg" alt="WiFi and SIM Cards">
+        </div>
+      </section>
     </div>
   </main>
 

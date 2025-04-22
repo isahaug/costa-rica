@@ -12,46 +12,61 @@
       padding: 0;
       background-color: #fffaf8;
     }
+
     header {
       background-color: #3e805f;
-      padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 10;
     }
-    header .navbar-brand {
+
+    .navbar-brand {
       font-weight: bold;
       font-size: 1.5rem;
       color: white;
     }
+
     .navbar-nav .nav-link {
       color: white !important;
     }
+
     section {
       padding: 2rem 1rem;
       margin: 1rem auto;
       max-width: 900px;
       border-radius: 12px;
     }
+
     .section-light {
-      background-color: #ffecec;
+      background-color: #4b8e2e;
       color: #111;
     }
+
     .section-mid {
-      background-color: #ffb3b3;
+      background-color: lab(43.01% -40.33 19.34);
       color: #111;
     }
+
     .section-dark {
-      background-color: #cc3c3c;
+      background-color: #00ae48;
       color: white;
     }
+
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }
+
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #214e3d;
+    }
+
     ul {
       padding-left: 1.5rem;
     }
+
     .highlight-box {
       padding: 1rem;
       border-radius: 8px;
@@ -59,141 +74,156 @@
       margin-top: 1rem;
       font-weight: bold;
     }
+
     a {
       color: inherit;
     }
+
     a:hover {
       text-decoration: underline;
     }
+    .navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+/* FIX HEADER HEIGHT */
+header.bg-success {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 56px;
+}
+
+.navbar-brand {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
   </style>
-  </head>
+</head>
 <body>
-    <header class="bg-success text-white p-3 position-sticky top-0 z-3">
-        <div class="container d-flex justify-content-between align-items-center flex-wrap">
-          <a href="index.html" class="text-white text-decoration-none fw-bold fs-4 m-0">Explore Costa Rica</a>
-          <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
-      
-                  <!-- EXPERIENCE Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
-                      EXPERIENCE
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
-                      <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
-                      <li><a class="dropdown-item" href="festivals.html">events & festivals</a></li>
-                      <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
-                    </ul>
-                  </li>
-      
-                  <!-- EXPLORE Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
-                      EXPLORE
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
-                      <li><a class="dropdown-item" href="culture.html">Culture</a></li>
-                      <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-                    </ul>
-                  </li>
-      
-                  <!-- PLAN Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
-                      PLAN YOUR TRIP
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
-                      <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
-                    </ul>
-                  </li>
-      
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      
-<main>
+  <header class="position-sticky top-0 z-3">
+    <nav class="navbar navbar-expand-md navbar-dark bg-success container-fluid px-3">
+      <a href="index.html" class="navbar-brand fw-bold">Explore Costa Rica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <section class="section-light">
-    <h2>🛡️ General Safety Overview</h2>
-    <p>Costa Rica is one of the safest countries in Central America for travelers. It has a stable democracy, friendly locals, and strong tourism infrastructure. Petty theft is the most common issue, so keep an eye on your belongings. Violent crime is rare in tourist areas.</p>
-  </section>
+      <div class="collapse navbar-collapse mt-2 mt-md-0" id="mainNavbar">
+        <ul class="navbar-nav ms-auto text-center text-md-start">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">EXPERIENCE</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
+              <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
+              <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">EXPLORE</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+              <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">PLAN YOUR TRIP</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
+              <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <section class="section-mid">
-    <h2>🚶 Street & City Safety Tips</h2>
-    <ul>
-      <li>Avoid walking alone at night in unfamiliar areas.</li>
-      <li>Don’t flash valuables (phones, jewelry, cameras).</li>
-      <li>Stick to well-lit streets and use trusted transportation.</li>
-    </ul>
-    <div class="highlight-box">🚕 Use official red taxis with the yellow triangle.</div>
-  </section>
+  <main class="container-fluid px-0">
+    <h1 class="text-center fw-bold display-4" style="color: #214e3d;">Safety Tips</h1>
 
-  <section class="section-light">
-    <h2>🌋 Natural Hazards</h2>
-    <ul>
-      <li>Watch out for rip currents — many beaches don’t have lifeguards.</li>
-      <li>Check volcano and park safety alerts before visiting.</li>
-      <li>During rainy season (May–November), landslides and floods can impact travel.</li>
-    </ul>
-  </section>
+    <section class="section-light">
+      <h2>🛡️ General Safety Overview</h2>
+      <p>Costa Rica is one of the safest countries in Central America for travelers. It has a stable democracy, friendly locals, and strong tourism infrastructure. Petty theft is the most common issue, so keep an eye on your belongings. Violent crime is rare in tourist areas.</p>
+    </section>
 
-  <section class="section-mid">
-    <h2>🦟 Health & Medical Info</h2>
-    <ul>
-      <li>Tap water is generally safe, but bottled water is best in rural areas.</li>
-      <li>Use repellent to avoid mosquito bites (especially during rainy season).</li>
-      <li>No vaccines are required, but Hepatitis A and Typhoid are recommended for some travelers.</li>
-    </ul>
-    <p><strong>Emergency Number:</strong> Dial 911 for medical or police help.</p>
-  </section>
+    <section class="section-mid">
+      <h2>🚶 Street & City Safety Tips</h2>
+      <ul>
+        <li>Avoid walking alone at night in unfamiliar areas.</li>
+        <li>Don’t flash valuables (phones, jewelry, cameras).</li>
+        <li>Stick to well-lit streets and use trusted transportation.</li>
+      </ul>
+      <div class="highlight-box">🚕 Use official red taxis with the yellow triangle.</div>
+    </section>
 
-  <section class="section-dark">
-    <h2>📞 Emergency Contacts</h2>
-    <ul>
-      <li><strong>Police:</strong> 911</li>
-      <li><strong>Medical Help:</strong> 911</li>
-      <li><strong>Tourist Police:</strong> +506 2221-5447</li>
-      <li><strong>US Embassy:</strong> +506 2519-2000</li>
-      <li><a href="https://www.seguridadpublica.go.cr/contactenos/directorio/"_blank" style="color: white; text-decoration: underline;">Judicial Investigation Police (OIJ)</a></li>
-    </ul>
-  </section>
+    <section class="section-light">
+      <h2>🌋 Natural Hazards</h2>
+      <ul>
+        <li>Watch out for rip currents — many beaches don’t have lifeguards.</li>
+        <li>Check volcano and park safety alerts before visiting.</li>
+        <li>During rainy season (May–November), landslides and floods can impact travel.</li>
+      </ul>
+    </section>
 
-  <section class="section-light">
-    <h2>🧠 Common Travel Scams</h2>
-    <ul>
-      <li>Be cautious of strangers offering deals or tours on the street.</li>
-      <li>Always double-check credit card charges.</li>
-      <li>Don’t hand over your card out of sight.</li>
-    </ul>
-  </section>
+    <section class="section-mid">
+      <h2>🦟 Health & Medical Info</h2>
+      <ul>
+        <li>Tap water is generally safe, but bottled water is best in rural areas.</li>
+        <li>Use repellent to avoid mosquito bites (especially during rainy season).</li>
+        <li>No vaccines are required, but Hepatitis A and Typhoid are recommended for some travelers.</li>
+      </ul>
+      <p><strong>Emergency Number:</strong> Dial 911 for medical or police help.</p>
+    </section>
 
-  <section class="section-mid">
-    <h2>🔐 Female & LGBTQ+ Travelers</h2>
-    <p>Costa Rica is very safe for solo female and LGBTQ+ travelers. Urban and tourist areas are inclusive, but displays of affection in rural towns may attract attention.</p>
-  </section>
+    <section class="section-dark">
+      <h2>📞 Emergency Contacts</h2>
+      <ul>
+        <li><strong>Police:</strong> 911</li>
+        <li><strong>Medical Help:</strong> 911</li>
+        <li><strong>Tourist Police:</strong> +506 2221-5447</li>
+        <li><strong>US Embassy:</strong> +506 2519-2000</li>
+        <li><a href="https://www.seguridadpublica.go.cr/contactenos/directorio/" target="_blank" style="color: white; text-decoration: underline;">Judicial Investigation Police (OIJ)</a></li>
+      </ul>
+    </section>
 
-  <section class="section-light">
-    <h2>🧳 Packing Safety Tips</h2>
-    <ul>
-      <li>Photocopy your passport and store it separately from the original.</li>
-      <li>Bring a waterproof pouch or dry bag.</li>
-      <li>Carry a flashlight or portable charger in rural areas.</li>
-    </ul>
-  </section>
+    <section class="section-light">
+      <h2>🧠 Common Travel Scams</h2>
+      <ul>
+        <li>Be cautious of strangers offering deals or tours on the street.</li>
+        <li>Always double-check credit card charges.</li>
+        <li>Don’t hand over your card out of sight.</li>
+      </ul>
+    </section>
 
-</main>
+    <section class="section-mid">
+      <h2>🔐 Female & LGBTQ+ Travelers</h2>
+      <p>Costa Rica is very safe for solo female and LGBTQ+ travelers. Urban and tourist areas are inclusive, but displays of affection in rural towns may attract attention.</p>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section class="section-light">
+      <h2>🧳 Packing Safety Tips</h2>
+      <ul>
+        <li>Photocopy your passport and store it separately from the original.</li>
+        <li>Bring a waterproof pouch or dry bag.</li>
+        <li>Carry a flashlight or portable charger in rural areas.</li>
+      </ul>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+      &copy; 2025 Explore Costa Rica
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

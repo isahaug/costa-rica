@@ -5,20 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nature & Wildlife</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <header class="bg-success text-white text-center p-4">
-    <h1>Nature & Wildlife</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure & Sports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <style>
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      .nature-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #f4f4f4;
+  padding: 1rem 0;
+}
 
-  <main class="container my-5">
+.nature-track {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.nature-slide {
+  flex: 0 0 auto;
+  width: 320px; 
+  height: 220px; 
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.nature-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+    </style>
+  </head>
+<header class="bg-success text-white position-sticky top-0 z-3">
+<nav class="navbar navbar-expand-md navbar-dark container-fluid px-3">
+  <a href="index.html" class="navbar-brand fw-bold">Explore Costa Rica</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse mt-2 mt-md-0" id="mainNavbar">
+    <ul class="navbar-nav ms-auto text-center text-md-start">
+
+      <!-- EXPERIENCE Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown">
+          EXPERIENCE
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="adventure.html">adventure & sports</a></li>
+          <li><a class="dropdown-item" href="beaches.html">beaches & relaxation</a></li>
+          <li><a class="dropdown-item" href="wildlife.html">nature & wildlife</a></li>
+        </ul>
+      </li>
+
+      <!-- EXPLORE Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
+          EXPLORE
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="biodiversity.html">Biodiversity</a></li>
+          <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+          <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+        </ul>
+      </li>
+
+      <!-- PLAN YOUR TRIP Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="planDropdown" role="button" data-bs-toggle="dropdown">
+          PLAN YOUR TRIP
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="travel.html">Travel Tips</a></li>
+          <li><a class="dropdown-item" href="questions.html">Ask Questions</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+</header>
+
+<main class="container my-5">
     <p>Spot sloths hanging in trees, scarlet macaws soaring above, and dolphins dancing in Pacific waters. Costa Rica's biodiversity is unmatched, and whether you're on land or at sea, the wild is always waiting to surprise you.</p>
-  </main>
-
+  
+    <div class="nature-carousel mt-4">
+      <div class="nature-track">
+        <div class="nature-slide"><img src="images/n1.jpg" alt="Nature 1"></div>
+        <div class="nature-slide"><img src="images/n2.jpg" alt="Nature 2"></div>
+        <div class="nature-slide"><img src="images/n3.jpg" alt="Nature 3"></div>
+        <div class="nature-slide"><img src="images/n4.jpg" alt="Nature 4"></div>
+        <div class="nature-slide"><img src="images/n5.jpg" alt="Nature 5"></div>
+        <div class="nature-slide"><img src="images/n6.jpg" alt="Nature 6"></div>
+        <div class="nature-slide"><img src="images/n7.jpg" alt="Nature 7"></div>
+        <div class="nature-slide"><img src="images/n8.jpg" alt="Nature 8"></div>
+        <div class="nature-slide"><img src="images/n9.jpg" alt="Nature 9"></div>
+        <div class="nature-slide"><img src="images/n10.jpg" alt="Nature 10"></div>
+        <div class="nature-slide"><img src="images/n11.jpg" alt="Nature 11"></div>
+        <div class="nature-slide"><img src="images/n12.jpg" alt="Nature 12"></div>
+        <div class="nature-slide"><img src="images/n13.jpg" alt="Nature 13"></div>
+        <div class="nature-slide"><img src="images/n14.jpg" alt="Nature 14"></div>
+      </div>
+    </div>
+  </main>  
+  <section class="container my-5">
+    <div class="row text-center">
+      <!-- On the Wing -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 bg-warning rounded" data-bs-toggle="modal" data-bs-target="#wingModal" style="cursor:pointer;">
+          <img src="images/n15.jpg" alt="On the Wing" class="img-fluid rounded mb-3" style="height: 300px; object-fit: cover;">
+          <h5 class="fw-bold text-success">on the wing &rarr;</h5>
+        </div>
+      </div>
+  
+      <!-- By Sea -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 bg-pink rounded" data-bs-toggle="modal" data-bs-target="#seaModal" style="cursor:pointer;">
+          <img src="images/n16.jpg" alt="By Sea" class="img-fluid rounded mb-3" style="height: 300px; object-fit: cover;">
+          <h5 class="fw-bold text-success">by sea &rarr;</h5>
+        </div>
+      </div>
+  
+      <!-- On Land -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 bg-success bg-opacity-25 rounded" data-bs-toggle="modal" data-bs-target="#landModal" style="cursor:pointer;">
+          <img src="images/n17.jpg" alt="On Land" class="img-fluid rounded mb-3" style="height: 300px; object-fit: cover;">
+          <h5 class="fw-bold text-success">on land &rarr;</h5>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="bg-dark text-white text-center p-3">
     &copy; 2025 Explore Costa Rica
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- On the Wing Modal -->
+<div class="modal fade" id="wingModal" tabindex="-1" aria-labelledby="wingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="wingLabel">On the Wing</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/eod6rvZFAhE" title="On the Wing" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- By Sea Modal -->
+  <div class="modal fade" id="seaModal" tabindex="-1" aria-labelledby="seaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="seaLabel">By Sea</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/8PkBlO5JB3s" title="By Sea" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- On Land Modal -->
+  <div class="modal fade" id="landModal" tabindex="-1" aria-labelledby="landLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="landLabel">On Land</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/O8rv5cCQ4HQ" title="On Land" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>

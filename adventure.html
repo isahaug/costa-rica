@@ -260,7 +260,7 @@
         <div class="flip-card" tabindex="0" role="button">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="images/zipline.jpg" alt="Ziplining" class="card-img-top">
+                  <img src="images/o1.jpg" alt="Ziplining" class="card-img-top">
                   <div class="p-3">
                     <h5 class="card-title text-success fw-bold">Ziplining</h5>
                   </div>
@@ -276,7 +276,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/wildlife.jpg" class="card-img-top" alt="Wildlife in Corcovado">
+              <img src="images/o2.jpg" class="card-img-top" alt="Wildlife in Corcovado">
               <div class="p-3">
                 <h5 class="card-title text-success fw-bold">Exploring Corcovado's Biodiversity</h5>
               </div>
@@ -293,7 +293,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/surfing.jpg" class="card-img-top" alt="Surfing">
+              <img src="images/o3.jpg" class="card-img-top" alt="Surfing">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Surfing Both Pacific and Caribbean Coasts</h5>
               </div>
@@ -311,7 +311,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/volcano.jpg" class="card-img-top" alt="Hiking Volcanoes">
+              <img src="images/o4.jpg" class="card-img-top" alt="Hiking Volcanoes">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Hiking Active Volcanoes</h5>
               </div>
@@ -329,7 +329,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/hotsprings.jpg" class="card-img-top" alt="Hot Springs in Costa Rica">
+              <img src="images/o5.jpg" class="card-img-top" alt="Hot Springs in Costa Rica">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Soaking in Natural Hot Springs</h5>
               </div>
@@ -347,7 +347,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/waterfall.jpg" class="card-img-top" alt="Waterfalls in Costa Rica">
+              <img src="images/o6.jpg" class="card-img-top" alt="Waterfalls in Costa Rica">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Chasing Majestic Waterfalls</h5>
               </div>
@@ -365,7 +365,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/rafting.jpg" class="card-img-top" alt="White-water Rafting in Costa Rica">
+              <img src="images/o7.jpg" class="card-img-top" alt="White-water Rafting in Costa Rica">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">White-water Rafting on the Pacuare River</h5>
               </div>
@@ -383,7 +383,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/roadtrip.jpg" class="card-img-top" alt="Scenic Road Trips in Costa Rica">
+              <img src="images/o8.jpeg" class="card-img-top" alt="Scenic Road Trips in Costa Rica">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Embarking on Scenic Road Trips</h5>
               </div>
@@ -401,7 +401,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/scuba.jpg" class="card-img-top" alt="Scuba Diving in Costa Rica">
+              <img src="images/o9.jpeg" class="card-img-top" alt="Scuba Diving in Costa Rica">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Scuba Diving in Pristine Waters</h5>
               </div>
@@ -419,7 +419,7 @@
         <div class="flip-card" tabindex="0" role="button">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="images/yoga.jpg" class="card-img-top" alt="Yoga Retreats in Costa Rica">
+              <img src="images/o10.jpg" class="card-img-top" alt="Yoga Retreats in Costa Rica">
               <div class="card-body text-center">
                 <h5 class="card-title text-success fw-bold">Jungle Yoga Retreats</h5>
               </div>
@@ -471,6 +471,20 @@
 .flip-card-front {
   background: white;
 }
+@media (max-width: 768px) {
+  .flip-card {
+    height: auto;
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+  }
+  .flip-card-inner {
+    transform: none !important;
+  }
+}
 
 .flip-card-back {
   background: #e8f5e9;
@@ -490,6 +504,7 @@
         });
       });
     });
+    
   </script>
 </body>
 </html>

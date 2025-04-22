@@ -30,52 +30,11 @@
       padding: 1rem;
       width: 100%;
     }
-    .flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: 300px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
+    .flip-card,
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
+  height: auto;
+  min-height: 300px;
 }
-
-.flip-card:hover .flip-card-inner,
-.flip-card:focus .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.flip-card-front {
-  background: white;
-}
-
-.flip-card-back {
-  background: #e8f5e9;
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-}
-
   </style>
 </head>
 <body>
@@ -298,8 +257,7 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
       <!-- Adventure 1 -->
       <div class="col">
-        <div class="col">
-            <div class="flip-card" tabindex="0">
+        <div class="flip-card" tabindex="0" role="button">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <img src="images/zipline.jpg" alt="Ziplining" class="card-img-top">
@@ -313,102 +271,225 @@
               </div>
             </div>
           </div>
-      </div>
-      <!-- Adventure 2 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/wildlife.jpg" class="card-img-top" alt="Wildlife in Corcovado">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Exploring Corcovado's Biodiversity</h5>
-            <p class="card-text">Delve into Corcovado National Park, home to 3% of the world's biodiversity, and encounter exotic wildlife in their natural habitat.</p>
+       <!-- Adventure 2 -->
+       <div class="col">
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/wildlife.jpg" class="card-img-top" alt="Wildlife in Corcovado">
+              <div class="p-3">
+                <h5 class="card-title text-success fw-bold">Exploring Corcovado's Biodiversity</h5>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <p><strong>Fun Fact:</strong> Corcovado is home to 3% of the world’s biodiversity in just 0.03% of the Earth’s surface — it’s one of the most biologically intense places on Earth, according to National Geographic.</p>
+              <p><strong>Where to do it:</strong> Corcovado National Park, Osa Peninsula</p>
+            </div>
           </div>
         </div>
       </div>
       <!-- Adventure 3 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/surfing.jpg" class="card-img-top" alt="Surfing in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Surfing Both Pacific and Caribbean Coasts</h5>
-            <p class="card-text">Ride the waves on both the Pacific and Caribbean coasts in a single day, a unique surfing experience exclusive to Costa Rica.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/surfing.jpg" class="card-img-top" alt="Surfing">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Surfing Both Pacific and Caribbean Coasts</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> Costa Rica is one of the few countries where you can surf two different oceans in a single day — experienced surfers call it the "two-coast challenge."</p>
+              <p><strong>Where to do it:</strong> Start in Puerto Viejo (Caribbean) and end in Jacó or Tamarindo (Pacific)</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 4 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/volcano.jpg" class="card-img-top" alt="Hiking Arenal Volcano">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Hiking Active Volcanoes</h5>
-            <p class="card-text">Embark on hikes around active volcanoes like Arenal and Irazú, witnessing geothermal wonders and panoramic vistas.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/volcano.jpg" class="card-img-top" alt="Hiking Volcanoes">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Hiking Active Volcanoes</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> Costa Rica’s volcanoes are part of the Pacific Ring of Fire, and Arenal once erupted daily for over 40 years — you can still hike its lava trails today.</p>
+              <p><strong>Where to do it:</strong> Arenal Volcano, Irazú Volcano, and Rincón de la Vieja</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 5 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/hotsprings.jpg" class="card-img-top" alt="Hot Springs in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Soaking in Natural Hot Springs</h5>
-            <p class="card-text">Relax in naturally heated hot springs nestled within tropical jungles, a soothing experience amidst nature.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/hotsprings.jpg" class="card-img-top" alt="Hot Springs in Costa Rica">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Soaking in Natural Hot Springs</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> Costa Rica’s hot springs are heated by volcanic activity — and some, like Tabacón, flow directly from the base of Arenal Volcano at over 100°F.</p>
+              <p><strong>Where to do it:</strong> La Fortuna, Arenal, Rincón de la Vieja</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 6 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/waterfall.jpg" class="card-img-top" alt="Waterfalls in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Chasing Majestic Waterfalls</h5>
-            <p class="card-text">Discover stunning waterfalls like La Fortuna and Rio Celeste, offering picturesque views and refreshing swims.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/waterfall.jpg" class="card-img-top" alt="Waterfalls in Costa Rica">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Chasing Majestic Waterfalls</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> Costa Rica is home to hundreds of waterfalls — some hidden deep in rainforests and others glowing blue like Río Celeste, thanks to volcanic minerals.</p>
+              <p><strong>Where to do it:</strong> La Fortuna, Bajos del Toro, Tenorio National Park</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 7 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/rafting.jpg" class="card-img-top" alt="White-water Rafting in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">White-water Rafting on the Pacuare River</h5>
-            <p class="card-text">Navigate thrilling rapids on the Pacuare River, surrounded by lush rainforests and cascading waterfalls.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/rafting.jpg" class="card-img-top" alt="White-water Rafting in Costa Rica">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">White-water Rafting on the Pacuare River</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> The Pacuare River is ranked among the world’s top 5 rafting destinations, offering not just adrenaline-pumping rapids but also views of jaguars, toucans, and hidden waterfalls.</p>
+              <p><strong>Where to do it:</strong> Pacuare River, Sarapiquí River, Tenorio River</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 8 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/roadtrip.jpg" class="card-img-top" alt="Road Trip in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Embarking on Scenic Road Trips</h5>
-            <p class="card-text">Drive through diverse landscapes, from coastal roads to mountainous terrains, uncovering hidden gems along the way.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/roadtrip.jpg" class="card-img-top" alt="Scenic Road Trips in Costa Rica">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Embarking on Scenic Road Trips</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> Costa Rica's compact size allows you to drive from a Caribbean beach to a volcano to a Pacific sunset—all in one unforgettable day.</p>
+              <p><strong>Where to do it:</strong> Route 32, Interamericana, Nicoya Peninsula, and Central Highlands</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 9 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/scuba.jpg" class="card-img-top" alt="Scuba Diving in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Scuba Diving in Pristine Waters</h5>
-            <p class="card-text">Dive into crystal-clear waters around Caño Island, exploring vibrant coral reefs and diverse marine life.</p>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/scuba.jpg" class="card-img-top" alt="Scuba Diving in Costa Rica">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Scuba Diving in Pristine Waters</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <p><strong>Fun Fact:</strong> Costa Rica is one of the few places in the world where you can spot hammerhead sharks, manta rays, and sea turtles in the same dive.</p>
+              <p><strong>Where to do it:</strong> Caño Island, Catalina Islands, and Cocos Island (UNESCO site)</p>
+            </div>
           </div>
         </div>
       </div>
+      
       <!-- Adventure 10 -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/yoga.jpg" class="card-img-top" alt="Yoga Retreats in Costa Rica">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Participating in Jungle Yoga Retreats</h5>
-            <p class="card-text">Find inner peace with yoga sessions set amidst the serene backdrop of Costa Rica's lush jungles.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div class="flip-card" tabindex="0" role="button">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/yoga.jpg" class="card-img-top" alt="Yoga Retreats in Costa Rica">
+              <div class="card-body text-center">
+                <h5 class="card-title text-success fw-bold">Jungle Yoga Retreats</h5>
+              </div>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+                <p><strong>Fun Fact:</strong> Many Costa Rican retreats are located within wildlife sanctuaries, so don’t be surprised if a monkey joins your morning meditation.</p>
+                <p><strong>Where to do it:</strong> Nosara, Uvita, Santa Teresa</p>
+            </div> <!-- flip-card-back -->
+        </div> <!-- flip-card-inner -->
+        </div> <!-- flip-card -->
+        </div> 
+      
   </section>
   <footer class="bg-dark text-white text-center p-3">
     &copy; 2025 Explore Costa Rica
   </footer>
+  <style>
+  .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.flip-card-front {
+  background: white;
+}
+
+.flip-card-back {
+  background: #e8f5e9;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+    </style>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
